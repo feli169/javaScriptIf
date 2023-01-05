@@ -1,0 +1,51 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+}
+.borde1{
+    text-align: center;
+    border: 2px solid black;
+    padding: 5px;
+}
+
+img{
+    height: 140px;
+    margin-bottom: 5px;
+}
+
+button{
+    padding: 5px;
+    background-color: rgb(40, 72, 178);
+    color: white;
+}
+#segundo-problema{
+    text-align: center;
+    border: black 2px solid;
+    padding: 5px;
+}
+.stickes{
+    display: flex;
+    text-align: center;
+    margin: 5px 0px;
+}
+#sticker1, #sticker2, #sticker3{
+    width: 50px;
+}
+.contraseña3{
+    border: solid 2px black;
+    padding: 20px;
+    text-align: center;
+}
+#selector1, #selector2, #selector3{
+    height: 25px;
+    width: 50px;   
+}
+
+.borde1, .sticker2, .contraseña3{
+    margin: 10px;
+    background-color: azure;
+}
