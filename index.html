@@ -16,14 +16,7 @@
         <div class="borde1">
                 Primer Problema
                 <img id="img11" src="./assets/img/sandia.png" alt="sandia">
-                <button id="btn-11" onclick="
-                foto = document.querySelector('#img11')
-                if (foto.style.border === '2px solid red') {
-                    foto.style.border = '0px';
-                }else{
-                    foto.style.border = '2px solid red';
-                }
-                ">Borde</button>
+                <button id="btn-11" onclick=" agregarQuitarBorde()">Borde</button>
         </div>
 
         <!-- -----segundo problema----- -->
@@ -34,35 +27,21 @@
                 <div class="stickes">
                     <div class="sticker1">
                         <img src="./assets/img/Nintendo_switch_logo.png" id="img21" alt="nintendo">
-                        <input id="sticker1" type="number">
+                        <input id="sticker1" type="number" min="0">
                     </div>
 
                     <div class="sticker2">
                         <img src="./assets/img/logo-ps5.png" alt="ps5">
-                        <input type="number" id="sticker2">
+                        <input type="number" min="0" id="sticker2">
                     </div>
 
                     <div class="sticker3">
                         <img src="./assets/img/xbox sx.png" alt="xboxx">
-                        <input id="sticker3" type="number">
+                        <input id="sticker3" type="number" min="0">
                     </div>
                 </div>
                 <p id="respuesta">Ingresa las cantidades.</p>
-                <button id="btn21" onclick="
-                const sk1 = document.querySelector('#sticker1').value;
-                const sk2 = document.querySelector('#sticker2').value;
-                const sk3 = document.querySelector('#sticker3').value;
-                const total = parseInt(sk1) +parseInt(sk2) + parseInt(sk3)
-                
-                if (total <= 10){
-                    respt = document.querySelector('#respuesta')
-                    respt.innerHTML = 'Llevas ' + total + ' stickers.'
-                }else{
-                    resf = document.querySelector('#respuesta')
-                    resf.innerHTML = 'Llevas demasiados stickers.'
-                }
-                
-                ">Verificar</button>
+                <button id="btn21" onclick="contadorConLimite()">Verificar</button>
             </div>
         </div>
 
@@ -109,28 +88,11 @@
                     <option value="9">9</option>
 
             </select>
-            <p id="pass">Ingrse Contraseña.</p>
+            <p id="pass">Ingrse Password.</p>
 
-            <button id="val" onclick="
-            const element1 = document.querySelector('#selector1').value;
-            const element2 = document.querySelector('#selector2').value;
-            const element3 = document.querySelector('#selector3').value;
-            let vali = element1 + element2 + element3
-            
-            console.log(vali)
-            if (vali == 911){
-                val = document.querySelector('#pass')
-                val.innerHTML = 'Password 1 correcto.'
-            }else if(vali == 714) {
-                val2 = document.querySelector('#pass')
-                val2.innerHTML = 'Password 2 correcto.'
-            }else{
-                valw = document.querySelector('#pass')
-                valw.innerHTML = 'Password incorrecto.'
-            }
-            ">Validar</button>
+            <button id="val" onclick="VerificadorDeContraceña()">Validar</button>
         </div>
     </div>
+    <script src="./assets/js/main.js"></script>
 </body>
-
 </html>
